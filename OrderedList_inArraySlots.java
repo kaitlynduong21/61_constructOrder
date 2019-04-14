@@ -18,13 +18,16 @@ public class OrderedList_inArraySlots
     public OrderedList_inArraySlots
             ( ArrayList<Integer> unordered) {
         this();  // improve, for optional extra education
-
-        // test champIndex, for incremental development
         for (int i = 0; i < unordered.size(); i ++) {
           int index = champIndex( unordered);
           list_iAS.add(unordered.get(index));
           unordered.set(index, null);
         }
+        /* test champIndex, for incremental development
+       int nextLargerAt = champIndex( unordered);
+       System.out.println(
+           "smallest element is at index " + nextLargerAt
+         + " and has the value " + unordered.get( nextLargerAt));*/
     }
 
 
